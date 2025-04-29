@@ -16,7 +16,7 @@
 <canvas id="gameCanvas" width="800" height="600"></canvas>
 
 <script>
-// Setup
+
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -28,12 +28,12 @@ const sheepImg = new Image();
 sheepImg.src = 'img/sheep.png';
 
 const backgroundImg = new Image();
-backgroundImg.src = 'img/background.png'; // Optional
+backgroundImg.src = 'img/background.png'; 
 
 // Sound
 const barkSound = new Audio('img/bark.mp3');
 
-// Game Variables
+
 let collie = { x: 100, y: 100, width: 40, height: 40, speed: 5 };
 let sheep = [];
 let sheepCount = 5;
@@ -41,7 +41,7 @@ let keys = {};
 
 let cage = { x: 600, y: 400, width: 150, height: 150 };
 
-// Create sheep
+
 for (let i = 0; i < sheepCount; i++) {
     sheep.push({
         x: Math.random() * 550,
@@ -52,7 +52,7 @@ for (let i = 0; i < sheepCount; i++) {
     });
 }
 
-// Key Controls
+
 window.addEventListener('keydown', (e) => keys[e.key] = true);
 window.addEventListener('keyup', (e) => keys[e.key] = false);
 
